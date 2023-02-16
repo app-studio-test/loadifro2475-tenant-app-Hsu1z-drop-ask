@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadifro2475-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadifro2475-tenant-component
+    app.kubernetes.io/part-of: loadifro2475-tenant-app
+  name: loadifro2475-tenant-component
+  namespace: loadifro2475-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadifro2475-tenant-component
+    weight: null
+status: {}
